@@ -18,14 +18,12 @@ namespace slagsmål
 
 
             Random generator = new Random();
-            Random secondGenerator = new Random();
+            // Random secondGenerator = new Random();
 
-
-
-            while (hp1 >= 0 || hp2 >= 0)
+            while (hp1 >= 0 && hp2 >= 0)
             {
                 int dmg1 = generator.Next(1, 31);
-                int dmg2 = secondGenerator.Next(1, 31);
+                int dmg2 = generator.Next(1, 31);
                 hp1 = hp1 - dmg1;
                 hp2 = hp2 - dmg2;
 
